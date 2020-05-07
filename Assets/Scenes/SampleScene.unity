@@ -121,6 +121,26 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &56836690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4469164416396618342, guid: 57de7efecb9ab204cbbded16ba55ad56,
+    type: 3}
+  m_PrefabInstance: {fileID: 4469164416381855796}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &56836695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56836690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc0c411c40b6f9499fdb5ad479241cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  time: 10
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -174,7 +194,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10.712463
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -198,7 +218,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.75, y: 4.5, z: -10}
+  m_LocalPosition: {x: 5.75, y: 9.9, z: -20.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
