@@ -6,9 +6,7 @@ public class player_move : MonoBehaviour
 {
     public float speed = 10.0f;
     public float time = 10.0f;
-    private float x = 6.0f;
-    private float y = 1.5f;
-    private float z = 0.0f;
+    private float x;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,15 +15,13 @@ public class player_move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if (Input.GetKeyDown("d") && x != 12)
+         if (Input.GetKey("q") && gameObject.transform.position.x > 0)
         {
-            x += 3;
-            transform.position = new Vector3(x, y, z);
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
         }
-        if (Input.GetKeyDown("q") && x != 0)
+        if (Input.GetKey("d") && gameObject.transform.position.x < 12)
         {
-            x -= 3;
-            transform.position = new Vector3(x,y,z);
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
     }
 }
