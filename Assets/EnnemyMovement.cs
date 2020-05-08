@@ -14,6 +14,7 @@ public class EnnemyMovement : MonoBehaviour
         x=gameObject.transform.position.x;
         y=gameObject.transform.position.y;
         timer=0.0f;
+        vitesse = 1f;
     }
 
     void Update()
