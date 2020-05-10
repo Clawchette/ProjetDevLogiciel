@@ -18,7 +18,12 @@ public class bullet_animation : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other){
-        Destroy(other.gameObject);
-        Destroy(gameObject);
+        if(other.tag=="Ennemy"){
+            Destroy(gameObject);
+            if(other.name=="Neutre"){
+                Destroy(other);
+            }
+        }
+        
     }
 }
