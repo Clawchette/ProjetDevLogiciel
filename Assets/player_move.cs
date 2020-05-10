@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class player_move : MonoBehaviour
 {
-    public float speed = 10.0f;
-    public float time = 10.0f;
-    private float x;
+    public float speed;
+
     // Start is called before the first frame update
-    void Start()
-    {
+    void Start(){
+        speed=10.0f;
     }
 
     // Update is called once per frame
@@ -23,5 +22,11 @@ public class player_move : MonoBehaviour
         {
             transform.Translate(Vector3.right * speed * Time.deltaTime);
         }
+    }
+
+    public void DeplacementAugm(){
+        if(speed<20f){
+            speed+=2f;
+        }     
     }
 }
