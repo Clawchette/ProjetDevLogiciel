@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class player_move : MonoBehaviour
 {
-    public float speed;
+    private float speed;
 
     // Start is called before the first frame update
     void Start(){
-        speed=10.0f;
+        speed=GameObject.Find("gameManager").GetComponent<GameManager>().vitesseDeplacement;
     }
 
     // Update is called once per frame
