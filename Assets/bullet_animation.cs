@@ -19,10 +19,10 @@ public class bullet_animation : MonoBehaviour
 
     private void OnTriggerEnter(Collider other){
         if(other.tag=="Ennemy"){
-            Destroy(gameObject);
-            if(other.name=="Neutre"){
-                Destroy(other);
+            if(other.name=="Neutre(Clone)"){
+                Destroy(other.gameObject);
             }
+            Destroy(gameObject);
         }
         
     }
