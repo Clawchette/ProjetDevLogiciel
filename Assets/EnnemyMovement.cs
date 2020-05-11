@@ -23,7 +23,7 @@ public class EnnemyMovement : MonoBehaviour
 
     void Update()
     {
-        vitesse = gameManager.vitesse;
+        vitesse = gameManager.vitesseDefilement;
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
