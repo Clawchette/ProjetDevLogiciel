@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class bullet_animation : MonoBehaviour
 {
+    private int compteur;
     public float speed_bullet = 10.0f;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class bullet_animation : MonoBehaviour
         if(other.tag=="Ennemy"){
             if(other.name=="Neutre(Clone)"){
                 Destroy(other.gameObject);
+                GameObject.Find("gameManager").GetComponent<credits>().compteur += 1;
             }
             Destroy(gameObject);
         }
