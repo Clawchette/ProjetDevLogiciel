@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 6745205386632980569}
   - component: {fileID: 4683853183657756395}
   - component: {fileID: -5548832021444573031}
-  - component: {fileID: -8252269010308422720}
   - component: {fileID: 5339270292759180811}
   m_Layer: 0
   m_Name: DefilementAugm
@@ -109,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9262212382508074b8d7e52577160c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vitesse: 0
 --- !u!54 &-5548832021444573031
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -125,19 +125,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &-8252269010308422720
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2893161057647950879}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5339270292759180811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,5 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254c64205cec2b9408996f19becfccd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuffDefilementAugm: {fileID: 2698782860898700891, guid: 8353161ac4064bf408561c6b344dd112,
+  BuffDefilementAugm: {fileID: 2698782860898700891, guid: bc59a234da071e44c9fbed783f9fd66b,
     type: 3}
