@@ -5,8 +5,13 @@ using UnityEngine;
 public class player_shot : MonoBehaviour
 {
     public GameObject myPrefabObject;
-    public float fireRate = 0.5f;
-    private float nextFire = 0.0f;
+    private float fireRate;
+    private float nextFire;
+
+    void Start(){
+        fireRate = GameObject.Find("gameManager").GetComponent<GameManager>().vitesseTir;
+        nextFire=0f;
+    }
 
     void Update()
     { 
