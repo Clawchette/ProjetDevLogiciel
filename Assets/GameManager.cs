@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public float vitesseDeplacement;
     public float vitesseTir;
 
+    public float vitesseDefilementBuff;
+
     void Start()
     {
         player = GameObject.FindWithTag("Player");
@@ -26,6 +28,8 @@ public class GameManager : MonoBehaviour
         vitesseDefilement = 1f;
         vitesseDeplacement = 5f;
         vitesseTir = 0.5f;
+
+        vitesseDefilementBuff=vitesseDefilement;
     }
 
     void Update()
@@ -37,8 +41,8 @@ public class GameManager : MonoBehaviour
     }
 
     public void DefilementAugm(){
-        if(vitesseDefilement>0.5f){
-            vitesseDefilement-=0.1f;
+        if(vitesseDefilementBuff>0.5f){
+            vitesseDefilementBuff-=0.1f;
         }        
     }
 }
