@@ -1,28 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     //pour la fin du jeu
     private GameObject player;
     private GameObject ground;
+    public bool isGameOver;
+    public bool didPlayerDie;
 
-        //Variables par défaut / à sauvegarder
+    //Variables par défaut / à sauvegarder
     public int credits;
-    //modifiables UNIQUEMENT dans le menu équipement
-    //Si elles sont modifiées à la fin d'un niveau par les buffs obtenus dans la partie ça pète la sauvegarde 
-    //donc faut faire attention stplz
+        //les variables suivantes sont modifiables UNIQUEMENT dans le menu équipement pour la sauvegarde
+        //Si elles sont modifiées à la fin d'un niveau par les buffs obtenus dans la partie ça pète la sauvegarde 
+        //donc faut faire attention stplz
     public float vitesseDefilement;
     public float vitesseDeplacement;
     public float vitesseTir;
 
+    //pour les buffs en partie, ne PAS modifier avec le menu équipement et ne PAS sauvegarder 
     public float vitesseDefilementBuff;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         ground = GameObject.FindWithTag("Ground");
+        isGameOver = false;
+        didPlayerDie = false; 
 
         credits = 0;
         vitesseDefilement = 1f;
@@ -34,9 +40,16 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
-        //Verif si la partie est finie
-        if(player.GetComponent<TriggerEnnemy>().isGameOver==true || ground.GetComponent<TriggerEnnemy>().isGameOver==true){
-            Debug.Log("Fin de la partie"); //a remplacer par changement vers ecran de fin de partie
+        //Verif si le joueur est mort
+        if(didPlayerDie==true){
+            SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
+            isGameOver=true;
+        }
+        //Verif si le joueur a quitté la partie
+        if(Input.GetKeyDown("escape")){
+            gameObject.GetComponent<Save>().SaveGame();
+            isGameOver=true;
+            SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
         }
     }
 

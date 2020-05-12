@@ -8,17 +8,12 @@ using System.IO;
 public class Save : MonoBehaviour
 {
     private GameManager gameManager;
-    //Variables à sauvegarder
-    int credits;  
-    float vitesseTir;
-    float vitesseDefilement;
-    float vitesseDeplacement;
 
     void Start(){
-        gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
+        gameManager=gameObject.GetComponent<GameManager>();
     }
 
-    void SaveGame(){
+    public void SaveGame(){
         BinaryFormatter bf = new BinaryFormatter(); 
 	    FileStream file = File.Create(Application.persistentDataPath + "/SaveFile.dat");
         SaveData data = new SaveData();
@@ -31,7 +26,7 @@ public class Save : MonoBehaviour
         Debug.Log("Game data saved!");
     }
 
-    void LoadGame(){
+    public void LoadGame(){
         if (File.Exists(Application.persistentDataPath + "/SaveFile.dat"))
 	    {
             BinaryFormatter bf = new BinaryFormatter();
