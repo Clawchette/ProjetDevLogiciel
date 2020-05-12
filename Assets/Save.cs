@@ -16,9 +16,11 @@ public class Save : MonoBehaviour
 
     void Start(){
         gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
+        LoadGame();
+        Debug.Log("LoadGame");
     }
 
-    void SaveGame(){
+    public void SaveGame(){
         BinaryFormatter bf = new BinaryFormatter(); 
 	    FileStream file = File.Create(Application.persistentDataPath + "/SaveFile.dat");
         SaveData data = new SaveData();

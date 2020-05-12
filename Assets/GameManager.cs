@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //pour la fin du jeu
-    private GameObject player;
-    private GameObject ground;
 
         //Variables par défaut / à sauvegarder
     public int credits;
@@ -19,21 +16,11 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
-        ground = GameObject.FindWithTag("Ground");
 
         credits = 0;
         vitesseDefilement = 1f;
         vitesseDeplacement = 5f;
         vitesseTir = 0.5f;
-    }
-
-    void Update()
-    {
-        //Verif si la partie est finie
-        if(player.GetComponent<TriggerEnnemy>().isGameOver==true || ground.GetComponent<TriggerEnnemy>().isGameOver==true){
-            Debug.Log("Fin de la partie"); //a remplacer par changement vers ecran de fin de partie
-        }
     }
 
     public void DefilementAugm(){
