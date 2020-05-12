@@ -18,18 +18,21 @@ public class EnnemyMovement : MonoBehaviour
         x=gameObject.transform.position.x;
         y=gameObject.transform.position.y;
         timer=0.0f;
-        vitesse=1f;
+        vitesse=gameManager.vitesseDefilement;
     }
 
     void Update()
     {
-        vitesse = gameManager.vitesseDefilement;
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            y--;
-            gameObject.transform.position = new Vector3(x, y, 0f);
-            timer = vitesse;
+        if(gameManager.isGameActive==true){
+            vitesse = gameManager.vitesseDefilementBuff;
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                y--;
+                gameObject.transform.position = new Vector3(x, y, 0f);
+                timer = vitesse;
+            }
         }
     } 
+
 }
