@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpawnEnnemies : MonoBehaviour
 {
+    private GameManager gameManager;
+
     public GameObject DefilementAugm;       //ennemi qui augmente la vitesse de défilement
     public GameObject DeplacementAugm;      //ennemi qui augmente la vitesse de déplacement
     public GameObject VitTirDimin;          //ennemi qui diminue la vitesse de tir
@@ -16,18 +18,21 @@ public class SpawnEnnemies : MonoBehaviour
     void Start()
     {
         spawnSpeed=3;
+        gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            randomPos = Random.Range(0, 5)*3;           //renvoie 0, 3, 6, 9 ou 12 aléatoirement, soit les positions x possibles
-            position = new Vector3(randomPos, 30, 0);
-            SpawnEnnemy(position);
-            timer = spawnSpeed;
+        if(gameManager.isGameActive==true){
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                randomPos = Random.Range(0, 5)*3;           //renvoie 0, 3, 6, 9 ou 12 aléatoirement, soit les positions x possibles
+                position = new Vector3(randomPos, 30, 0);
+                SpawnEnnemy(position);
+                timer = spawnSpeed;
+            }
         }
     }
 

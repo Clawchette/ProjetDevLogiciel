@@ -23,13 +23,15 @@ public class EnnemyMovement : MonoBehaviour
 
     void Update()
     {
-        vitesse = gameManager.vitesseDefilementBuff;
-        timer -= Time.deltaTime;
-        if (timer <= 0)
-        {
-            y--;
-            gameObject.transform.position = new Vector3(x, y, 0f);
-            timer = vitesse;
+        if(gameManager.isGameActive==true){
+            vitesse = gameManager.vitesseDefilementBuff;
+            timer -= Time.deltaTime;
+            if (timer <= 0)
+            {
+                y--;
+                gameObject.transform.position = new Vector3(x, y, 0f);
+                timer = vitesse;
+            }
         }
     } 
 

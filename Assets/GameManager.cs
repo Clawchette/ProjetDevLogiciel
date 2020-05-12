@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     //pour la fin du jeu
     private GameObject player;
     private GameObject ground;
-    public bool isGameOver;
+    public bool isGameActive;
     public bool didPlayerDie;
 
     //Variables par défaut / à sauvegarder
@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         ground = GameObject.FindWithTag("Ground");
-        isGameOver = false;
+        isGameActive = true;        //il faudra qu'il soit en false par défaut et que le bouton start du menu principal le mette en true
         didPlayerDie = false; 
 
         credits = 0;
@@ -42,15 +42,24 @@ public class GameManager : MonoBehaviour
     {
         //Verif si le joueur est mort
         if(didPlayerDie==true){
+            isGameActive=false;
             SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
-            isGameOver=true;
-        }
-        //Verif si le joueur a quitté la partie
-        if(Input.GetKeyDown("escape")){
-            gameObject.GetComponent<Save>().SaveGame();
-            isGameOver=true;
-            SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
-        }
+        }   
+    }
+
+    public void PlayerQuit(){   //à associer à un bouton sur le menu de pause
+        //le joueur quitte la partie
+        gameObject.GetComponent<Save>().SaveGame();
+        isGameActive=false;
+        SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
+    }
+
+    public void RetourMenu(){       //une fonction à mettre sur un bouton sur l'écran pour pas qu'elle soit lancée par accident
+        SceneManager.LoadScene("menue_scene");
+    }
+
+    public void CloseGame(){
+        Application.Quit();
     }
 
     public void DefilementAugm(){
