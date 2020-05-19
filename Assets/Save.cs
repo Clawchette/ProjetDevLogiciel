@@ -10,13 +10,9 @@ public class Save : MonoBehaviour
     private GameManager gameManager;
 
     void Start(){
-<<<<<<< HEAD
-        gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
+        gameManager=gameObject.GetComponent<GameManager>();
         LoadGame();
         Debug.Log("LoadGame");
-=======
-        gameManager=gameObject.GetComponent<GameManager>();
->>>>>>> 19aa3a88c3a72ab606ba08bf3280a32f91964761
     }
 
     public void SaveGame(){
