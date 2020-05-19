@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6442962595896447919}
   - component: {fileID: 6442962595896447918}
   - component: {fileID: -1697868356005438966}
+  - component: {fileID: -1934280017031851784}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -44,6 +45,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b798d37eaf06954a8494c24e7a03773, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isGameActive: 0
+  didPlayerDie: 0
+  credits: 0
+  vitesseDefilement: 0
+  vitesseDeplacement: 0
+  vitesseTir: 0
+  vitesseDefilementBuff: 0
 --- !u!114 &-1697868356005438966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,3 +71,15 @@ MonoBehaviour:
   VitTirDimin: {fileID: 2221037098831561611, guid: 4b8307a4cc9e1ba46a7d221b5fc7eabc,
     type: 3}
   Neutre: {fileID: 6922876671542529952, guid: c6dabea794d4d324483b61a6d3caec14, type: 3}
+--- !u!114 &-1934280017031851784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442962595896447917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd8251ecdb132c42ba5ee1654c74015, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
