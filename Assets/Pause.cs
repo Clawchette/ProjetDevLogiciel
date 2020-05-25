@@ -20,7 +20,7 @@ public class Pause : MonoBehaviour
         }
     }
 
-    public void Unpause(){ //associer cette fonction au bouton "Revenir au jeu" pour qu'il soit fonctionnel
+    public void Unpause(){
         gameObject.GetComponent<GameManager>().isGameActive=true;
         pauseCanvas.gameObject.SetActive(false);
     }
