@@ -127,18 +127,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 6442962595424084268}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &88290360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 88290359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8379f3168e505494f88537c08cfc6c3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &88290361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -678,6 +666,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86dc20af0d4908d448c391242342f3a7, type: 3}
+--- !u!114 &6442962595424084269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: -250665498295225361, guid: 86dc20af0d4908d448c391242342f3a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 6442962595424084268}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88290359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e68b912d0a58fe64b843425b3b4a97ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7495843200900075918
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -819,7 +819,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 88290363}
+      objectReference: {fileID: 6442962595424084269}
+    - target: {fileID: 7495843201832995708, guid: 7fa41002dd9f8354cb6fd810555394d9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RetourMenuPrincipal
+      objectReference: {fileID: 0}
     - target: {fileID: 7495843201832995710, guid: 7fa41002dd9f8354cb6fd810555394d9,
         type: 3}
       propertyPath: m_IsActive
@@ -829,11 +834,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 88290359}
+      objectReference: {fileID: 88290361}
     - target: {fileID: 7495843202121847762, guid: 7fa41002dd9f8354cb6fd810555394d9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: Unpause
       objectReference: {fileID: 0}
     - target: {fileID: 7495843202121847764, guid: 7fa41002dd9f8354cb6fd810555394d9,
         type: 3}
