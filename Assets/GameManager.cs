@@ -5,14 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
-    //pour la fin du jeu
-    private GameObject player;
-    private GameObject ground;
-    public bool isGameActive;
-    public bool didPlayerDie;
->>>>>>> 19aa3a88c3a72ab606ba08bf3280a32f91964761
 
     //Variables par défaut / à sauvegarder
     public int credits;
@@ -28,8 +20,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-<<<<<<< HEAD
-=======
         player = GameObject.FindWithTag("Player");
         ground = GameObject.FindWithTag("Ground");
         isGameActive = true;        //il faudra qu'il soit en false par défaut et que le bouton start du menu principal le mette en true
@@ -44,33 +34,6 @@ public class GameManager : MonoBehaviour
         vitesseDefilementBuff=vitesseDefilement;
     }
 
-<<<<<<< HEAD
-=======
-    void Update()
-    {
-        //Verif si le joueur est mort
-        if(didPlayerDie==true){
-            isGameActive=false;
-            SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
-        }   
-    }
-
-    public void PlayerQuit(){   //à associer à un bouton sur le menu de pause
-        //le joueur quitte la partie
-        gameObject.GetComponent<Save>().SaveGame();
-        isGameActive=false;
-        SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
-    }
-
-    public void RetourMenu(){       //une fonction à mettre sur un bouton sur l'écran pour pas qu'elle soit lancée par accident
-        SceneManager.LoadScene("menue_scene");
-    }
-
-    public void CloseGame(){
-        Application.Quit();
-    }
-
->>>>>>> 19aa3a88c3a72ab606ba08bf3280a32f91964761
     public void DefilementAugm(){
         if(vitesseDefilementBuff>0.5f){
             vitesseDefilementBuff-=0.1f;
