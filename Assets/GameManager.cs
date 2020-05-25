@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void PlayerQuit(){
+        credits += gameObject.GetComponent<credits>().creditscount;
         gameObject.GetComponent<Save>().SaveGame();
         isGameActive=false;
         SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie

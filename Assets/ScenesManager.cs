@@ -21,5 +21,13 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene("menue_scene");
     }
 
+    public void MenuAbout(){
+        SceneManager.LoadScene("About");
+    }
+
+    public void MenuAmeliorations(){
+        gameObject.GetComponent<Save>().LoadGame();
+        SceneManager.LoadScene("amelioration");
+    }
 
 }
