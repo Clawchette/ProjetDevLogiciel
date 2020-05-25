@@ -9,12 +9,8 @@ public class player_move : MonoBehaviour
 
     // Start is called before the first frame update
     void Start(){
-<<<<<<< HEAD
-        speed=GameObject.Find("gameManager").GetComponent<GameManager>().vitesseDeplacement;
-=======
         gameManager = GameObject.Find("gameManager").GetComponent<GameManager>();
         speed=gameManager.vitesseDeplacement;
->>>>>>> b73b15ee44c6db1876c3ee8aed521f8f0786c552
     }
 
     // Update is called once per frame

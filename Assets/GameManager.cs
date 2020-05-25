@@ -5,14 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-<<<<<<< HEAD
-=======
     //pour la fin du jeu
     private GameObject player;
     private GameObject ground;
     public bool isGameActive;
     public bool didPlayerDie;
->>>>>>> b73b15ee44c6db1876c3ee8aed521f8f0786c552
 
     //Variables par défaut / à sauvegarder
     public int credits;
@@ -41,8 +38,6 @@ public class GameManager : MonoBehaviour
         vitesseDefilementBuff=vitesseDefilement;
     }
 
-<<<<<<< HEAD
-=======
     void Update()
     {
         //Verif si le joueur est mort
@@ -67,7 +62,6 @@ public class GameManager : MonoBehaviour
         Application.Quit();
     }
 
->>>>>>> b73b15ee44c6db1876c3ee8aed521f8f0786c552
     public void DefilementAugm(){
         if(vitesseDefilementBuff>0.5f){
             vitesseDefilementBuff-=0.1f;
