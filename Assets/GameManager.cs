@@ -47,15 +47,11 @@ public class GameManager : MonoBehaviour
         }   
     }
 
-    public void PlayerQuit(){   //à associer à un bouton sur le menu de pause
-        //le joueur quitte la partie
+    public void PlayerQuit(){
+        credits += gameObject.GetComponent<credits>().creditscount;
         gameObject.GetComponent<Save>().SaveGame();
         isGameActive=false;
         SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
-    }
-
-    public void RetourMenu(){       //une fonction à mettre sur un bouton sur l'écran pour pas qu'elle soit lancée par accident
-        SceneManager.LoadScene("menue_scene");
     }
 
     public void CloseGame(){
@@ -66,11 +62,5 @@ public class GameManager : MonoBehaviour
         if(vitesseDefilementBuff>0.5f){
             vitesseDefilementBuff-=0.1f;
         }        
-    }
-
-    public void StartGame(){
-        gameObject.GetComponent<Save>().LoadGame();
-        SceneManager.LoadScene("SampleScene");
-        isGameActive=true;
     }
 }

@@ -11,8 +11,6 @@ public class Save : MonoBehaviour
 
     void Start(){
         gameManager=gameObject.GetComponent<GameManager>();
-        LoadGame();
-        Debug.Log("LoadGame");
     }
 
     public void SaveGame(){
