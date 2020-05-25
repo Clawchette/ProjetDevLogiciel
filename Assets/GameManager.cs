@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         player = GameObject.FindWithTag("Player");
         ground = GameObject.FindWithTag("Ground");
-        isGameActive = true;        //il faudra qu'il soit en false par défaut et que le bouton start du menu principal le mette en true
+        isGameActive = false;        
         didPlayerDie = false; 
 
         credits = 0;
@@ -66,5 +66,11 @@ public class GameManager : MonoBehaviour
         if(vitesseDefilementBuff>0.5f){
             vitesseDefilementBuff-=0.1f;
         }        
+    }
+
+    public void StartGame(){
+        gameObject.GetComponent<Save>().LoadGame();
+        SceneManager.LoadScene("SampleScene");
+        isGameActive=true;
     }
 }
