@@ -10,7 +10,11 @@ public class Save : MonoBehaviour
     private GameManager gameManager;
 
     void Start(){
+<<<<<<< HEAD
         gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
+=======
+        gameManager=gameObject.GetComponent<GameManager>();
+>>>>>>> b73b15ee44c6db1876c3ee8aed521f8f0786c552
         LoadGame();
         Debug.Log("LoadGame");
     }
