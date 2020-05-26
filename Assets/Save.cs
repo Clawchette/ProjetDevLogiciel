@@ -31,13 +31,15 @@ public class Save : MonoBehaviour
 	    {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/SaveFile.dat", FileMode.Open);
-            SaveData data = (SaveData)bf.Deserialize(file);
-            file.Close();
-            gameManager.credits = data.creditsSaved;
-            gameManager.vitesseTir = data.vitesseTirSaved;
-            gameManager.vitesseDefilement = data.vitesseDefilementSaved;
-            gameManager.vitesseDeplacement = data.vitesseDeplacementSaved;
-            Debug.Log("Game data loaded!");
+            if (file.Length > 0){
+                SaveData data = (SaveData)bf.Deserialize(file);
+                file.Close();
+                gameManager.credits = data.creditsSaved;
+                gameManager.vitesseTir = data.vitesseTirSaved;
+                gameManager.vitesseDefilement = data.vitesseDefilementSaved;
+                gameManager.vitesseDeplacement = data.vitesseDeplacementSaved;
+                Debug.Log("Game data loaded!");
+            }
 	    }
         
     }
