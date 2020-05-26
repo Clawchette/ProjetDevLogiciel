@@ -239,7 +239,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1353820814}
+      - m_Target: {fileID: 8054119701549899363, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
         m_MethodName: MonterDeplacement
         m_Mode: 1
         m_Arguments:
@@ -348,18 +349,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86dc20af0d4908d448c391242342f3a7, type: 3}
---- !u!114 &42458286 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: -250665498295225361, guid: 86dc20af0d4908d448c391242342f3a7,
-    type: 3}
-  m_PrefabInstance: {fileID: 42458285}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1353820808}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68b912d0a58fe64b843425b3b4a97ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &183490870
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +467,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1353820814}
+      - m_Target: {fileID: 8054119701549899363, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
         m_MethodName: BaisserDeplacement
         m_Mode: 1
         m_Arguments:
@@ -691,7 +681,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1353820814}
+      - m_Target: {fileID: 8054119701549899363, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
         m_MethodName: MonterTir
         m_Mode: 1
         m_Arguments:
@@ -910,7 +901,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 42458286}
+      - m_Target: {fileID: -250665498295225361, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
         m_MethodName: RetourMenuPrincipal
         m_Mode: 1
         m_Arguments:
@@ -921,7 +913,8 @@ MonoBehaviour:
           m_StringArgument: menue_scene
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1353820810}
+      - m_Target: {fileID: -6007300799722529455, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
         m_MethodName: SaveGame
         m_Mode: 1
         m_Arguments:
@@ -1139,7 +1132,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1353820814}
+      - m_Target: {fileID: 8054119701549899363, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
         m_MethodName: MonterDefilement
         m_Mode: 1
         m_Arguments:
@@ -1466,7 +1460,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1353820814}
+      - m_Target: {fileID: 8054119701549899363, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
         m_MethodName: BaisserDefilement
         m_Mode: 1
         m_Arguments:
@@ -1550,7 +1545,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &1570847475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1870,7 +1865,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1353820814}
+      - m_Target: {fileID: 8054119701549899363, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
         m_MethodName: BaisserTir
         m_Mode: 1
         m_Arguments:
@@ -2171,6 +2167,7 @@ GameObject:
   - component: {fileID: 6569207970910513934}
   - component: {fileID: 6569207970910513904}
   - component: {fileID: 6569207970910513905}
+  - component: {fileID: 6569207970910513936}
   m_Layer: 5
   m_Name: CreditsCount
   m_TagString: Untagged
@@ -2178,3 +2175,16 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6569207970910513936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569207970910513935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d411703a95a5f47935d17080c5e1ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creditscount: 0

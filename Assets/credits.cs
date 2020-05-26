@@ -6,22 +6,18 @@ using TMPro;
 
 public class credits : MonoBehaviour
 {
-    private TextMeshProUGUI credit_count;
     public int creditscount;
 
     
     void Start()
     {
         creditscount = 0;
-        credit_count.text = "Crédit : 0";
+        gameObject.GetComponent<TextMeshProUGUI>().text = "Crédit : 0";
     }
 
     
     void Update()
     {
-        if(credit_count==null){
-            credit_count = GameObject.Find("CreditsCount").GetComponent<TextMeshProUGUI>();
-        }
-        credit_count.text = "Crédits : " + creditscount;
+        gameObject.GetComponent<TextMeshProUGUI>().text = "Crédits : " + creditscount;
     }
 }

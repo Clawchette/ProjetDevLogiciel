@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: -1934280017031851784}
   - component: {fileID: -6007300799722529455}
   - component: {fileID: -250665498295225361}
-  - component: {fileID: -9041545289756617645}
   - component: {fileID: -4036788513607543611}
+  - component: {fileID: 8054119701549899363}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -111,21 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e68b912d0a58fe64b843425b3b4a97ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-9041545289756617645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6442962595896447917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d411703a95a5f47935d17080c5e1ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  credit_count: {fileID: 6569207970227205419, guid: 25ad5f00c93b16649bb149955a7a43bd,
-    type: 3}
-  creditscount: 0
 --- !u!114 &-4036788513607543611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,3 +124,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseCanvas: {fileID: 0}
+--- !u!114 &8054119701549899363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442962595896447917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bf1c3307ddfb7443a9ecc1589a14d07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
