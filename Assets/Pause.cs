@@ -11,8 +11,13 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
+        if(pauseCanvas==null && gameObject.GetComponent<GameManager>().isGameActive==true){
+            pauseCanvas = GameObject.Find("PauseCanvas");
+            pauseCanvas.SetActive(false);
+        }
+        
         if(Input.GetKeyDown("p") && gameObject.GetComponent<GameManager>().isGameActive==true){
-            pauseCanvas.gameObject.SetActive(true);
+            pauseCanvas.SetActive(true);
             gameObject.GetComponent<GameManager>().isGameActive=false;
         }
         else if(Input.GetKeyDown("p") && gameObject.GetComponent<GameManager>().isGameActive==false){
@@ -22,6 +27,6 @@ public class Pause : MonoBehaviour
 
     public void Unpause(){
         gameObject.GetComponent<GameManager>().isGameActive=true;
-        pauseCanvas.gameObject.SetActive(false);
+        pauseCanvas.SetActive(false);
     }
 }

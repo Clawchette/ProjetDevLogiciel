@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -6007300799722529455}
   - component: {fileID: -250665498295225361}
   - component: {fileID: -9041545289756617645}
+  - component: {fileID: -4036788513607543611}
   m_Layer: 0
   m_Name: gameManager
   m_TagString: Untagged
@@ -125,3 +126,16 @@ MonoBehaviour:
   credit_count: {fileID: 6569207970227205419, guid: 25ad5f00c93b16649bb149955a7a43bd,
     type: 3}
   creditscount: 0
+--- !u!114 &-4036788513607543611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6442962595896447917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eff5d2ce32b16641afd38fb374273bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseCanvas: {fileID: 0}
