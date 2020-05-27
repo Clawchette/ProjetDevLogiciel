@@ -11,6 +11,7 @@ public class player_move : MonoBehaviour
     void Start(){
         gameManager = GameObject.Find("gameManager").GetComponent<GameManager>();
         speed=gameManager.vitesseDeplacement;
+        gameManager.GetComponent<GameManager>().isGameActive=true;
     }
 
     // Update is called once per frame

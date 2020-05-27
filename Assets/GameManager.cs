@@ -46,10 +46,6 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
         }   
 
-        if(SceneManager.GetActiveScene().name=="SampleScene" && gameObject.GetComponent<Pause>()==null){
-            gameObject.AddComponent<Pause>();
-            isGameActive=true;
-        }
     }
 
     public void PlayerQuit(){
@@ -68,4 +64,5 @@ public class GameManager : MonoBehaviour
             vitesseDefilementBuff-=0.1f;
         }        
     }
+
 }
