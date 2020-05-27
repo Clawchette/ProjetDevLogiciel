@@ -7,12 +7,18 @@ using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
-    public GameObject pauseCanvas;
+    private GameObject pauseCanvas;
+
+    void Start(){
+        pauseCanvas = GameObject.Find("PauseCanvas");
+        pauseCanvas.SetActive(false);
+    }
 
     void Update()
     {
+        
         if(Input.GetKeyDown("p") && gameObject.GetComponent<GameManager>().isGameActive==true){
-            pauseCanvas.gameObject.SetActive(true);
+            pauseCanvas.SetActive(true);
             gameObject.GetComponent<GameManager>().isGameActive=false;
         }
         else if(Input.GetKeyDown("p") && gameObject.GetComponent<GameManager>().isGameActive==false){
@@ -22,6 +28,6 @@ public class Pause : MonoBehaviour
 
     public void Unpause(){
         gameObject.GetComponent<GameManager>().isGameActive=true;
-        pauseCanvas.gameObject.SetActive(false);
+        pauseCanvas.SetActive(false);
     }
 }

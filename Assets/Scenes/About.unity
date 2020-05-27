@@ -240,7 +240,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &813489462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1070,10 +1070,9 @@ MonoBehaviour:
   m_text: 'But du jeu : survivre le plus longtemps
 
 
-    Vous devez tirer sur les
-    enemies avant qu''il ne vous touche ou touche le sol .Si les enemies touche le
-    sol vous perdez , vous pouvez acheter des ameliorations dans le menue des upgrades
-    avec les points cumuler quand vous tuez les enemies.'
+    Vous devez tirer sur les enemies avant qu''il ne vous touche ou touche le sol
+    .Si les enemies touche le sol vous perdez , vous pouvez acheter des ameliorations
+    dans le menue des upgrades avec les points cumuler quand vous tuez les enemies.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1441,7 +1440,7 @@ GameObject:
   - component: {fileID: 1990746040}
   - component: {fileID: 1990746039}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BoutonRetour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1510,9 +1509,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1168955533}
-        m_MethodName: BtnNewScene
-        m_Mode: 5
+      - m_Target: {fileID: -250665498295225361, guid: 86dc20af0d4908d448c391242342f3a7,
+          type: 3}
+        m_MethodName: RetourMenuPrincipal
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
