@@ -5,15 +5,14 @@ using UnityEngine;
 public class bullet_animation : MonoBehaviour
 {
     public float speed_bullet = 10.0f;
-    private GameObject gameManager;
+    public GameObject credits;
     
     void Start()
     {
-        gameManager=GameObject.Find("gameManager");
+        credits=GameObject.Find("CreditsCount");
         Destroy(gameObject,5);
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.Translate(Vector3.up * speed_bullet * Time.deltaTime);
@@ -24,7 +23,7 @@ public class bullet_animation : MonoBehaviour
             if(other.name=="Neutre(Clone)"){
                 Destroy(other.gameObject);
             }
-            gameManager.GetComponent<credits>().creditscount += 1;
+            credits.GetComponent<credits>().creditscount += 1;
             Destroy(gameObject);
         }
         

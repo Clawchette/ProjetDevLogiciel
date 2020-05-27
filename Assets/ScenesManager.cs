@@ -8,7 +8,6 @@ public class ScenesManager : MonoBehaviour
     public void StartGame(){
         gameObject.GetComponent<Save>().LoadGame();
         SceneManager.LoadScene("SampleScene");
-        gameObject.GetComponent<GameManager>().isGameActive=true;
     }
 
     public void RetourMenuPrincipal(){
