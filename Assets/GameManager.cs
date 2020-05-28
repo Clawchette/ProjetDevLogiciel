@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     //pour la fin du jeu
     public bool isGameActive;
     public bool didPlayerDie;
+    // pour le score en scene lose
+
+    public int score;
 
     //Variables par défaut / à sauvegarder
     public int credits;
@@ -30,6 +33,7 @@ public class GameManager : MonoBehaviour
         vitesseTir = 0.5f;
 
         vitesseDefilementBuff=vitesseDefilement;
+        score = 0;
     }
 
     void Update()
@@ -37,8 +41,8 @@ public class GameManager : MonoBehaviour
         //Verif si le joueur est mort
         if(didPlayerDie==true){
             isGameActive=false;
-            SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
-            didPlayerDie=false;
+            SceneManager.LoadScene("lose"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
+            didPlayerDie = false;
         }   
 
     }
@@ -46,8 +50,10 @@ public class GameManager : MonoBehaviour
     public void PlayerQuit(){
         credits=GameObject.Find("CreditsCount").GetComponent<credits>().creditscount;
         gameObject.GetComponent<Save>().SaveGame();
+        Debug.Log(credits);
         isGameActive=false;
-        SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
+        SceneManager.LoadScene("player_quit");
+        Debug.Log(credits); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
     }
 
     public void CloseGame(){
