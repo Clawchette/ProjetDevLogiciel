@@ -22,8 +22,9 @@ public class bullet_animation : MonoBehaviour
         if(other.tag=="Ennemy"){
             if(other.name=="Neutre(Clone)"){
                 Destroy(other.gameObject);
-            }
+            } 
             credits.GetComponent<credits>().creditscount += 1;
+            GameObject.Find("gameManager").GetComponent<GameManager>().score ++ ;
             Destroy(gameObject);
         }
         

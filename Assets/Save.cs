@@ -8,7 +8,7 @@ using System.IO;
 public class Save : MonoBehaviour
 {
     private GameManager gameManager;
-    private int credits;
+    public int credits;
     private float vitesseTir;
     private float vitesseDefilement;
     private float vitesseDeplacement;
@@ -44,6 +44,7 @@ public class Save : MonoBehaviour
                 gameManager.vitesseTir = data.vitesseTirSaved;
                 gameManager.vitesseDefilement = data.vitesseDefilementSaved;
                 gameManager.vitesseDeplacement = data.vitesseDeplacementSaved;
+                GameObject.Find("gameManager").GetComponent<GameManager>().score = 0;
                 Debug.Log("Game data loaded!");
             }
 	    }        

@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/amelioration.unity
     guid: 98a58a010acaf9a4992fd4db0bcbdb62
+  - enabled: 1
+    path: Assets/Scenes/lose.unity
+    guid: af55a6d55ca9f6642840b5ab65293304
+  - enabled: 1
+    path: Assets/Scenes/player_quit.unity
+    guid: ddd73a2015538c74d9c4799ca2ebf463
   m_configObjects: {}
