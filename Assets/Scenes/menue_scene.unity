@@ -269,6 +269,11 @@ PrefabInstance:
       propertyPath: isGameActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6442962595896447918, guid: 86dc20af0d4908d448c391242342f3a7,
+        type: 3}
+      propertyPath: vitesseDeplacement
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6442962595896447919, guid: 86dc20af0d4908d448c391242342f3a7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -323,6 +328,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054119701549899363, guid: 86dc20af0d4908d448c391242342f3a7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 86dc20af0d4908d448c391242342f3a7, type: 3}

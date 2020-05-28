@@ -11,7 +11,7 @@ public class credits : MonoBehaviour
     
     void Start()
     {
-        creditscount = 0;
+        creditscount = GameObject.Find("gameManager").GetComponent<GameManager>().credits;
         gameObject.GetComponent<TextMeshProUGUI>().text = "Crédit : 0";
     }
 

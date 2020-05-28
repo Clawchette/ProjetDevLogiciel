@@ -8,19 +8,24 @@ using System.IO;
 public class Save : MonoBehaviour
 {
     private GameManager gameManager;
-
-    void Start(){
-        gameManager=gameObject.GetComponent<GameManager>();
-    }
+    private int credits;
+    private float vitesseTir;
+    private float vitesseDefilement;
+    private float vitesseDeplacement;
 
     public void SaveGame(){
         BinaryFormatter bf = new BinaryFormatter(); 
 	    FileStream file = File.Create(Application.persistentDataPath + "/SaveFile.dat");
         SaveData data = new SaveData();
-        data.creditsSaved = gameManager.credits;
-        data.vitesseTirSaved = gameManager.vitesseTir;
-        data.vitesseDefilementSaved = gameManager.vitesseDefilement;
-        data.vitesseDeplacementSaved = gameManager.vitesseDeplacement;
+        gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
+        credits = GameObject.Find("CreditsCount").GetComponent<credits>().creditscount;
+        data.creditsSaved = credits;
+        vitesseTir = gameManager.vitesseTir;
+        data.vitesseTirSaved = vitesseTir;
+        vitesseDefilement = gameManager.vitesseDefilement;
+        data.vitesseDefilementSaved = vitesseDefilement;
+        vitesseDeplacement = gameManager.vitesseDeplacement;
+        data.vitesseDeplacementSaved = vitesseDeplacement;
         bf.Serialize(file, data);
         file.Close();
         Debug.Log("Game data saved!");
@@ -34,14 +39,14 @@ public class Save : MonoBehaviour
             if (file.Length > 0){
                 SaveData data = (SaveData)bf.Deserialize(file);
                 file.Close();
+                gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
                 gameManager.credits = data.creditsSaved;
                 gameManager.vitesseTir = data.vitesseTirSaved;
                 gameManager.vitesseDefilement = data.vitesseDefilementSaved;
                 gameManager.vitesseDeplacement = data.vitesseDeplacementSaved;
                 Debug.Log("Game data loaded!");
             }
-	    }
-        
+	    }        
     }
 }
 

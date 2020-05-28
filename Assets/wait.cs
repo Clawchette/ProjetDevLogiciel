@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class wait : MonoBehaviour
 {
 
-    public float wait_time = 5f;
+    private float wait_time;
 
     void Start()
     {
+        wait_time = 5f;
         StartCoroutine(Wait_for_intro());
     }
 
