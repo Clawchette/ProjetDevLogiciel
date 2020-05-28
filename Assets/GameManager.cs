@@ -14,8 +14,6 @@ public class GameManager : MonoBehaviour
     //Variables par défaut / à sauvegarder
     public int credits;
         //les variables suivantes sont modifiables UNIQUEMENT dans le menu équipement pour la sauvegarde
-        //Si elles sont modifiées à la fin d'un niveau par les buffs obtenus dans la partie ça pète la sauvegarde 
-        //donc faut faire attention stplz
     public float vitesseDefilement;
     public float vitesseDeplacement;
     public float vitesseTir;
@@ -49,7 +47,6 @@ public class GameManager : MonoBehaviour
     }
 
     public void PlayerQuit(){
-        credits += gameObject.GetComponent<credits>().creditscount;
         gameObject.GetComponent<Save>().SaveGame();
         isGameActive=false;
         SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
@@ -64,5 +61,23 @@ public class GameManager : MonoBehaviour
             vitesseDefilementBuff-=0.1f;
         }        
     }
+
+    //menu equipement
+    public void EquipDefil(int modif){
+        vitesseDefilement+=modif*0.1f;
+        Payer();
+    }
+    public void EquipDepl(int modif){
+        vitesseDeplacement+=modif*2;
+        Payer();
+    }
+    public void EquipTir(int modif){
+        vitesseTir+=modif*0.1f;
+        Payer();
+    }
+    public void Payer(){
+        credits-=10;
+    }
+    
 
 }
