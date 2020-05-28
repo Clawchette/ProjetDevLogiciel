@@ -4,40 +4,42 @@ using UnityEngine;
 
 public class change_stat_square : MonoBehaviour
 {
+
     public void MonterDeplacement()
     {
-        if(gameObject.GetComponent<GameManager>().credits>=10){
-            GameObject.Find("gameManager").GetComponent<GameManager>().vitesseDeplacement --;
+        
+        if(GameObject.Find("gameManager").GetComponent<GameManager>().credits>=10){
+            GameObject.Find("gameManager").GetComponent<GameManager>().EquipDepl(1);
         }
     }
     public void BaisserDeplacement()
     {
-        if(gameObject.GetComponent<GameManager>().credits>=10){
-            GameObject.Find("gameManager").GetComponent<GameManager>().vitesseDeplacement ++;
+        if(GameObject.Find("gameManager").GetComponent<GameManager>().credits>=10){
+            GameObject.Find("gameManager").GetComponent<GameManager>().EquipDepl(-1);
         }
     }
     public void BaisserDefilement()
     {
-        if(gameObject.GetComponent<GameManager>().credits>=10){
-            GameObject.Find("gameManager").GetComponent<GameManager>().vitesseDefilement --;
+        if(GameObject.Find("gameManager").GetComponent<GameManager>().credits>=10){
+            GameObject.Find("gameManager").GetComponent<GameManager>().EquipDefil(-1);
         }
     }
     public void MonterDefilement()
     {
-        if(gameObject.GetComponent<GameManager>().credits>=10){
-            GameObject.Find("gameManager").GetComponent<GameManager>().vitesseDefilement ++;
+        if(GameObject.Find("gameManager").GetComponent<GameManager>().credits>=10){
+            GameObject.Find("gameManager").GetComponent<GameManager>().EquipDefil(-1);
         }
     }
     public void BaisserTir()
     {
-        if(gameObject.GetComponent<GameManager>().credits>=10){
-            GameObject.Find("gameManager").GetComponent<GameManager>().vitesseTir --;
+        if(GameObject.Find("gameManager").GetComponent<GameManager>().credits>=10){
+            GameObject.Find("gameManager").GetComponent<GameManager>().EquipTir(-1);
         }
     }
     public void MonterTir()
     {
-        if(gameObject.GetComponent<GameManager>().credits>=10){
-            GameObject.Find("gameManager").GetComponent<GameManager>().vitesseTir ++;
+        if(GameObject.Find("gameManager").GetComponent<GameManager>().credits>=10){
+            GameObject.Find("gameManager").GetComponent<GameManager>().EquipTir(1);
         }
     }
     
