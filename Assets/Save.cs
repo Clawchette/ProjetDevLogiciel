@@ -18,7 +18,7 @@ public class Save : MonoBehaviour
 	    FileStream file = File.Create(Application.persistentDataPath + "/SaveFile.dat");
         SaveData data = new SaveData();
         gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
-        credits = GameObject.Find("CreditsCount").GetComponent<credits>().creditscount;
+        credits = gameManager.credits;
         data.creditsSaved = credits;
         vitesseTir = gameManager.vitesseTir;
         data.vitesseTirSaved = vitesseTir;

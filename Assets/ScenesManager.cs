@@ -11,6 +11,8 @@ public class ScenesManager : MonoBehaviour
     }
 
     public void RetourMenuPrincipal(){
+        GameObject.Find("gameManager").GetComponent<GameManager>().credits=GameObject.Find("CreditsCount").GetComponent<credits>().creditscount;
+        gameObject.GetComponent<Save>().SaveGame();
         SceneManager.LoadScene("menue_scene");
     }
 

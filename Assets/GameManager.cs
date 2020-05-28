@@ -6,8 +6,6 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     //pour la fin du jeu
-    private GameObject player;
-    private GameObject ground;
     public bool isGameActive;
     public bool didPlayerDie;
 
@@ -23,8 +21,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindWithTag("Player");
-        ground = GameObject.FindWithTag("Ground");
         isGameActive = false;        
         didPlayerDie = false; 
 
@@ -42,11 +38,13 @@ public class GameManager : MonoBehaviour
         if(didPlayerDie==true){
             isGameActive=false;
             SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
+            didPlayerDie=false;
         }   
 
     }
 
     public void PlayerQuit(){
+        credits=GameObject.Find("CreditsCount").GetComponent<credits>().creditscount;
         gameObject.GetComponent<Save>().SaveGame();
         isGameActive=false;
         SceneManager.LoadScene("menue_scene"); //a remplacer par changement vers ecran de fin de partie avec infos sur la partie
@@ -72,11 +70,12 @@ public class GameManager : MonoBehaviour
         Payer();
     }
     public void EquipTir(int modif){
-        vitesseTir+=modif*0.1f;
+        vitesseTir-=modif*0.1f;
         Payer();
     }
     public void Payer(){
         credits-=10;
+        GameObject.Find("CreditsCount").GetComponent<credits>().creditscount-=10;
     }
     
 
