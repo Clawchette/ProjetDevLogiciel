@@ -12,24 +12,27 @@ public class SpawnEnnemies : MonoBehaviour
     public GameObject Neutre;               //ennemi sans effet special
     private Vector3 position;
     private int randomPos;
-    private int spawnSpeed;                  //un nouvel ennemi spawn toutes les x secondes
+    private int spawnSpeed;                  //un nouvel ennemi spawn toutes les *spawnSpeed* secondes
     private float timer;
 
     void Start()
     {
         spawnSpeed=3;
-        gameManager=GameObject.Find("gameManager").GetComponent<GameManager>();
+        gameManager=gameObject.GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //de nouveaux ennemis spawn si le jeu est actif
         if(gameManager.isGameActive==true){
+            //timer
             timer -= Time.deltaTime;
             if (timer <= 0)
             {
-                randomPos = Random.Range(0, 5)*3;           //renvoie 0, 3, 6, 9 ou 12 aléatoirement, soit les positions x possibles
+                //renvoie 0, 3, 6, 9 ou 12 aléatoirement, soit les positions x possibles
+                randomPos = Random.Range(0, 5)*3;           
                 position = new Vector3(randomPos, 30, 0);
+                //lance la fonction qui permet de faire apparaitre l'ennemi
                 SpawnEnnemy(position);
                 timer = spawnSpeed;
             }

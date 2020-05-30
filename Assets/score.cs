@@ -8,16 +8,17 @@ public class score : MonoBehaviour
 {
     private int score_fin;
     private int credit_fin;
-    // Start is called before the first frame update
+    private GameManager gameManager;
+
     void Start()
     {
-        
+        gameManager = GameObject.Find("gameManager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
+    //affiche le score du joueur de la partie quand il quitte le jeu
     void Update()
     {
-        score_fin = GameObject.Find("gameManager").GetComponent<GameManager>().score;
+        score_fin = gameManager.score;
         gameObject.GetComponent<TextMeshProUGUI>().text = "Score :" + score_fin;
     }
 }

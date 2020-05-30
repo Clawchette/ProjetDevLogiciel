@@ -5,6 +5,9 @@ using UnityEngine;
 public class change_stat_square : MonoBehaviour
 {
 
+    //fonctions lancées dans le menu équipement
+    //vérifient que le joueur a assez de crédit et ensuite lance la fonction d'achat d'amélioration
+
     public void MonterDeplacement()
     {
         

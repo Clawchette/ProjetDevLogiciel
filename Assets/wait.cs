@@ -14,6 +14,7 @@ public class wait : MonoBehaviour
         StartCoroutine(Wait_for_intro());
     }
 
+    //permet de changer la scène vers celle du menu principal après que l'animation d'intro soit finie
     IEnumerator Wait_for_intro()
     {
         yield return new WaitForSeconds(wait_time);

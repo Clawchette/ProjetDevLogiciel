@@ -7,16 +7,17 @@ using TMPro;
 public class points : MonoBehaviour
 {
     private int credit_fin;
-    // Start is called before the first frame update
+    private GameManager gameManager;
+
     void Start()
     {
-        
+        gameManager = GameObject.Find("gameManager").GetComponent<GameManager>();
     }
 
-    // Update is called once per frame
+    //affiche les crédits que le joueur possède quand il perd
     void Update()
     {
-        credit_fin = GameObject.Find("gameManager").GetComponent<GameManager>().credits;
+        credit_fin = gameManager.credits;
         gameObject.GetComponent<TextMeshProUGUI>().text = "Crédits :" + credit_fin;
     }
 }

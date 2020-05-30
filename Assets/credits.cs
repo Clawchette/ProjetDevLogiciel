@@ -11,6 +11,7 @@ public class credits : MonoBehaviour
     
     void Start()
     {
+        //récupère les crédits que le joueur possède déjà
         creditscount = GameObject.Find("gameManager").GetComponent<GameManager>().credits;
         gameObject.GetComponent<TextMeshProUGUI>().text = "Crédit : 0";
     }
@@ -18,6 +19,7 @@ public class credits : MonoBehaviour
     
     void Update()
     {
+        //affiche le nombre de crédits du joueur en temps réel
         gameObject.GetComponent<TextMeshProUGUI>().text = "Crédits : " + creditscount;
     }
 }

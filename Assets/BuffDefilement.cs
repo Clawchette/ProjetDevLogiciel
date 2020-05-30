@@ -13,6 +13,7 @@ public class BuffDefilement : MonoBehaviour
 
     void OnTriggerEnter(Collider other){
         if(other.tag=="Player"){
+            //augmente la vitesse de défilement quand le joueur touche la sphere de buff qui est ensuite détruite
             gameManager.DefilementAugm();
             Destroy(gameObject);
         }
