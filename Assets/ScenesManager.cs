@@ -13,7 +13,9 @@ public class ScenesManager : MonoBehaviour
 
     //si le joueur retourne au menu principal à partir du jeu, ses crédits gagnés sont sauvegardés et la scène change vers celle du menu principal 
     public void RetourMenuPrincipal(){
-        GameObject.Find("gameManager").GetComponent<GameManager>().credits=GameObject.Find("CreditsCount").GetComponent<credits>().creditscount;
+        if(GameObject.Find("CreditsCount")){
+            GameObject.Find("gameManager").GetComponent<GameManager>().credits=GameObject.Find("CreditsCount").GetComponent<credits>().creditscount;
+        }
         gameObject.GetComponent<Save>().SaveGame();
         SceneManager.LoadScene("menue_scene");
     }
