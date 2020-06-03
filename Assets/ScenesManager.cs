@@ -31,4 +31,8 @@ public class ScenesManager : MonoBehaviour
         SceneManager.LoadScene("amelioration");
     }
 
+    public void QuitterJeu(){
+        
+    }
+
 }
